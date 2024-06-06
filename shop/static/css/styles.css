@@ -58,17 +58,18 @@ button:hover {
 .nav_icons {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   height: calc(100vh - 142px);
   position: fixed;
   top: 142px;
   left: 0;
   z-index: 1;
-  margin-left: 40px;
+  margin-left: 10px;
   margin-top: auto;
   display: none;
 }
 .nav_icon {
+  margin: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,6 +207,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 .scores {
   width: 100%;
@@ -252,10 +254,10 @@ footer {
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 250px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -268,15 +270,23 @@ footer {
 /* Modal Content */
 .modal-content {
   display: flex;
+  flex-direction: column;
+  margin-top: 50%;
+  position: relative; /* Add this line */
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 25px;
+  max-width: 900px;
 }
 
 /* The Close Button */
 .close {
+  position: absolute; /* Add this line */
+  top: 10px; /* Add this line */
+  right: 10px; /* Add this line */
   color: #aaaaaa;
   font-size: 36px;
   font-weight: bold;
@@ -359,27 +369,44 @@ textarea {
     align-items: center;
   }
   .hero {
-    margin-left: 120px;
+    margin-left: 80px;
+    padding: 0 2vh;
   }
   .team {
-    margin-left: 120px;
+    margin-left: 100px;
   }
   .game {
-    margin-left: 120px;
+    padding: 0 1vh;
+    margin-left: 100px;
   }
   .cometitions {
-    margin-left: 120px;
+    margin-left: 100px;
   }
   .shop {
-    margin-left: 120px;
+    margin-left: 100px;
   }
   .contact_page {
-    margin-left: 120px;
+    margin-left: 100px;
   }
   .nav_link {
     display: none;
   }
   .nav_icons {
     display: flex;
+  }
+  .modal_img {
+    width: 90%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .register_form {
+    width: 50%;
+    margin: auto; /* Add this line */
+  }
+  .register_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

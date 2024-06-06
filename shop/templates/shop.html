@@ -19,12 +19,12 @@ Shop
           <h2>{{ product.name }}</h2>
           <p>Price: {{ product.price }}</p>
         </div>
-        <button class="see-more" data-target="#modal{{ product.id }}">See More</button>
+        <button class="see-more" data-target="#modal{{ product.id }}">Details</button>
       </div>
       <div id="modal{{ product.id }}" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <img src="{{ product.image.url }}" alt="{{ product.name }}">
+          <img class="modal_img" src="{{ product.image.url }}" alt="{{ product.name }}">
           <div>
             <h2>{{ product.name}}</h2>
             <p>{{ product.description }}</p>
