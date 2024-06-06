@@ -1,0 +1,13 @@
+# dotfiles
+.*
+!/.gitignore
+
+# compiled python files
+*.py[c]
+
+# IDE helpers
+pyrightconfig.json
+tags
+
+# VIM files
+*.vim
