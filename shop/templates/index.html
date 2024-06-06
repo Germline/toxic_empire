@@ -1,0 +1,86 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<section class='hero'>
+  <div><img class='hero_logo' src="static/images/logo-Textiga-764x456.png" alt=""></div>
+</section>
+<section class="team">
+  <div class='leader_section'>
+    <p class='headline'>The Team</p>
+    <div class='player'>
+      <img class='p_image' src="static/images/player1_no_bg.png" alt="">
+      <p class='p_name'>NERO</p>
+      <p class="p_description">Captain</p>
+      <p class="p_description">Top lane</p>
+    </div>
+  </div>
+  <div class='players_section'>
+    <div class='player'>
+      <img class='p_image' src="static/images/player2_no_bg.png" alt="">
+      <p class='p_name'>Palayer1</p>
+      <p class="p_description">Jungler</p>
+      <p class="p_description">Jungle</p>
+    </div>
+    <div class='player'>
+      <img class='p_image' src="static/images/player3_no_bg.png" alt="">
+      <p class='p_name'>LostCall</p>
+      <p class="p_description">APC</p>
+      <p class="p_description">Mid Lane</p>
+    </div>
+    <div class='player'>
+      <img class='p_image' src="static/images/player4_no_bg.png" alt="">
+      <p class='p_name'>OneShot</p>
+      <p class="p_description">ADC</p>
+      <p class="p_description">Bottom lane</p>
+    </div>
+    <div class='player'>
+      <img class='p_image' src="static/images/player5_no_bg.png" alt="">
+      <p class='p_name'>Zezima</p>
+      <p class="p_description">Support</p>
+      <p class="p_description">Bottom Lane</p>
+    </div>
+  </div>
+</section>
+<section class='game'>
+  <p class='headline'>the game</p>
+  <p><span class='highlight'>League of Legends</span> is a popular multiplayer online battle arena (MOBA) game developed
+    and published by Riot Games.
+    Released in 2009, the game involves two teams of five players each, competing to destroy the opposing team's Nexus,
+    a core building located within their base. Players control champions, each with unique abilities and playstyles, and
+    must work together strategically to outmaneuver and outfight the enemy team. The game features various modes,
+    including the primary Summoner's Rift, and has a deep, evolving meta that keeps the gameplay fresh and competitive.
+    Known for its vibrant esports scene, League of Legends hosts numerous regional leagues and international
+    tournaments, culminating in the annual World Championship.</p>
+</section>
+<section class='cometitions'>
+  <p class='headline'>Competitions</p>
+  <div class='scores'>
+    <div class='score'>
+      <h2>Summer Split</h2>
+      <p>Teams: Toxic Empire vs. Fanatic</p>
+      <p>Date: May 20, 2024</p>
+      <p>Score: 3-1</p>
+      <p>Location: Los Angeles, CA</p>
+    </div>
+    <div class='score'>
+      <h2>Summer Split</h2>
+      <p>Teams: Toxic Empire vs. Phoenix</p>
+      <p>Date: June 10, 2024</p>
+      <p>Score: 2-3</p>
+      <p>Location: Seoul, South Korea</p>
+    </div>
+    <div class='score'>
+      <h2>Summer Split</h2>
+      <p>Teams: Toxic Empire vs. Thunder</p>
+      <p>Date: July 5, 2024</p>
+      <p>Score: 1-3</p>
+      <p>Location: Berlin, Germany</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

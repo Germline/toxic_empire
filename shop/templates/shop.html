@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Shop
+{% endblock %}
+
+{% block content %}
+
+<section class='shop'>
+  <p class='headline'>Shop</p>
+  <div class='products'>
+    {% for product in products %}
+    <div class='product'>
+      <img class='shop_image' src="{{ product.image.url }}" alt="{{ product.name }}">
+      <div>
+        <div>
+          <h2>{{ product.name }}</h2>
+          <p>Price: {{ product.price }}</p>
+        </div>
+        <button class="see-more" data-target="#modal{{ product.id }}">See More</button>
+      </div>
+      <div id="modal{{ product.id }}" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="{{ product.image.url }}" alt="{{ product.name }}">
+          <div>
+            <h2>{{ product.name}}</h2>
+            <p>{{ product.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script src="{% static 'js/shop.js' %}"></script>
+
+{% endblock %}

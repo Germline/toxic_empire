@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2a403d;
+}
+
+/* BASE.HTML */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 24px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  font-size: 32px;
+  height: 142;
+  display: flex;
+  background-color: #2a403d;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 2;
+}
+
+.nav_link {
+  margin-left: 24px;
+  color: white;
+}
+
+button {
+  background-color: #2a403d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+button:hover {
+  background-color: #c3cbd6;
+}
+
+.nav_icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(100vh - 142px);
+  position: fixed;
+  top: 142px;
+  left: 0;
+  z-index: 1;
+  margin-left: 40px;
+  margin-top: auto;
+  display: none;
+}
+.nav_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c3cbd6;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.nav_icon:hover {
+  background-color: #2a403d;
+}
+
+.nav_img {
+  width: 40px;
+  height: auto;
+}
+
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-form {
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+}
+.auth_btns {
+  background-color: #2a403d;
+}
+
+#logoutForm {
+  background-color: #2a403d;
+}
+
+footer {
+  display: flex;
+  color: #c3cbd6;
+  margin-top: auto;
+  background-color: #2a403d;
+  text-align: center;
+  padding: 10px 0;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INDEX.HTML */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 500px;
+}
+
+.headline {
+  font-size: 62px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 50px;
+}
+
+.leader_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.players_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  width: 300px;
+  height: 600px;
+}
+.p_image {
+  width: 300px;
+  height: auto;
+}
+.p_name {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.p_description {
+  font-size: 36px;
+}
+
+.game {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cometitions {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.scores {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.score {
+  background-color: #c3cbd6;
+  padding: 20px 40px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+/* SHOP.HTML */
+
+.shop {
+  margin-top: 142px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 20px;
+  background-color: #c3cbd6;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.shop_image {
+  max-width: 300px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CONTACT.HTML */
+
+.contact_page {
+  margin-top: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+form {
+  background-color: #c3cbd6;
+  padding: 20px;
+  border-radius: 15px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+
+.register_page {
+  display: flex;
+  margin-top: 142px;
+  align-items: center;
+  justify-content: center;
+}
+.register_form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product {
+    width: 100%;
+  }
+  .players_section {
+    flex-direction: column;
+  }
+  .hero_logo {
+    width: 400px;
+    height: auto;
+  }
+  .scores {
+    flex-direction: column;
+  }
+  .score {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .hero {
+    margin-left: 120px;
+  }
+  .team {
+    margin-left: 120px;
+  }
+  .game {
+    margin-left: 120px;
+  }
+  .cometitions {
+    margin-left: 120px;
+  }
+  .shop {
+    margin-left: 120px;
+  }
+  .contact_page {
+    margin-left: 120px;
+  }
+  .nav_link {
+    display: none;
+  }
+  .nav_icons {
+    display: flex;
+  }
+}

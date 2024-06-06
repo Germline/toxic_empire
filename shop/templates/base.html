@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}My Site{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+
+<body>
+  <header>
+    <div class='nav_logo'><img src="{% static 'images/logo108x88.png' %}" alt="LOGO"></div>
+    <nav>
+      <a class="nav_link" href="{% url 'home' %}">Home</a>
+      <a class="nav_link" href="{% url 'shop' %}">Shop</a>
+      <a class="nav_link" href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class='auth_btns'>
+      {% if user.is_authenticated %}
+      <form id="logoutForm" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class='logoutbtn' type="submit">Logout</button>
+      </form>
+      {% else %}
+      <button id='loginButton'>Login</button>
+      <a href="{% url 'register' %}" class='register'><button>Register</button></a>
+      {% endif %}
+    </div>
+  </header>
+  <nav class='nav_icons'>
+    <a class="nav_icon" href="{% url 'home' %}">
+      <img class='nav_img' src="{% static 'icons/home.png' %}" alt="Home">
+    </a>
+    <a class="nav_icon" href="{% url 'shop' %}">
+      <img class='nav_img' src="{% static 'icons/shopping-cart.png' %}" alt="Shop">
+    </a>
+    <a class="nav_icon" href="{% url 'contact' %}">
+      <img class='nav_img' src="{% static 'icons/envelope.png' %}" alt="Contact">
+    </a>
+  </nav>
+  <div id="loginPopup" class="login-popup" style="display: none;">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+
+  <main>{% block content %}{% endblock %}</main>
+  <footer>
+    Toxic Empire &copy; 2024
+  </footer>
+  <script src="{% static 'js/shop.js' %}"></script>
+</body>
+
+</html>
