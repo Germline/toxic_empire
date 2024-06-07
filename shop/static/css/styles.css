@@ -284,9 +284,9 @@ footer {
 
 /* The Close Button */
 .close {
-  position: absolute; /* Add this line */
-  top: 10px; /* Add this line */
-  right: 10px; /* Add this line */
+  position: absolute;
+  top: 10px;
+  right: 10px;
   color: #aaaaaa;
   font-size: 36px;
   font-weight: bold;
@@ -408,5 +408,81 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+  header {
+    font-size: 24px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .hero {
+    margin-left: 0;
+    padding: 0 2vh;
+  }
+  .team {
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+  .game {
+    margin: 0;
+    padding: 0 3vh;
+    margin-left: 0;
+  }
+  .cometitions {
+    margin-left: 0;
+    margin-bottom: 100px;
+    padding: 0 3vh;
+  }
+
+  .nav_icons {
+    height: 70px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* Align items horizontally */
+    position: fixed; /* Make the nav bar fixed */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Make it span the full width */
+    background-color: #2a403d;
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+  }
+  .nav_icon {
+    margin: 0 10px; /* Add some margin */
+    height: 60px; /* Set the height */
+    width: 60px; /* Set the width */
+    padding: 10px;
+  }
+
+  .register_form {
+    width: 80%;
+    margin: auto; /* Add this line */
+    margin-bottom: 100px;
+    margin-top: 20px;
+  }
+
+  footer {
+    margin-bottom: 70px;
+  }
+  .form_items {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .shop {
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+
+  .modal {
+    padding-top: 150px;
   }
 }
