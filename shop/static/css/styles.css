@@ -40,19 +40,19 @@ header {
 
 .nav_link {
   margin-left: 24px;
-  color: white;
+  color: #c3cbd6;
 }
 
 button {
   background-color: #2a403d;
-  color: white;
+  color: #c3cbd6;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 6px;
 }
 button:hover {
-  background-color: #c3cbd6;
+  background-color: #748b6f;
 }
 
 .nav_icons {
@@ -255,16 +255,16 @@ footer {
 
 .modal {
   display: none;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 250px; /* Location of the box */
+  position: fixed;
+  z-index: 1;
+  padding-top: 250px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content */
@@ -272,7 +272,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-top: 50%;
-  position: relative; /* Add this line */
+  position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -402,7 +402,7 @@ textarea {
   }
   .register_form {
     width: 50%;
-    margin: auto; /* Add this line */
+    margin: auto;
   }
   .register_page {
     display: flex;
@@ -424,6 +424,10 @@ textarea {
     margin-left: 0;
     padding: 0 2vh;
   }
+  .hero_logo {
+    width: 300px;
+    height: auto;
+  }
   .team {
     margin-left: 0;
     margin-bottom: 100px;
@@ -440,37 +444,40 @@ textarea {
   }
 
   .nav_icons {
-    height: 70px;
+    height: 80px;
     margin-top: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly; /* Align items horizontally */
-    position: fixed; /* Make the nav bar fixed */
-    bottom: 0; /* Position it at the bottom */
-    left: 0; /* Position it at the left */
-    width: 100%; /* Make it span the full width */
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #2a403d;
     margin: 0;
     margin-top: auto;
     padding: 0;
   }
   .nav_icon {
-    margin: 0 10px; /* Add some margin */
-    height: 60px; /* Set the height */
-    width: 60px; /* Set the width */
+    margin: 0 10px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
+  }
+  .nav_icon:hover {
+    background-color: #748b6f;
   }
 
   .register_form {
     width: 80%;
-    margin: auto; /* Add this line */
+    margin: auto;
     margin-bottom: 100px;
     margin-top: 20px;
   }
 
   footer {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
   .form_items {
     display: flex;
