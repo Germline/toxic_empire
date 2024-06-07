@@ -492,4 +492,10 @@ textarea {
   .modal {
     padding-top: 150px;
   }
+  .contact {
+    margin: 0 auto;
+  }
+  .contact_page {
+    margin-left: 0;
+  }
 }
