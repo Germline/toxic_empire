@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Product
+from .models import ContactMessage, Product
 
 # Register your models here.
 
@@ -8,3 +8,8 @@ from .models import Product
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ["name", "description", "price", "image"]
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in ContactMessage._meta.fields]
